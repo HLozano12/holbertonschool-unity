@@ -1,15 +1,23 @@
 # General
 
-How to publish a build
+What is the Canvas
 
-How to reorder scenes in a build
+What is screen space vs world space
 
-How to build a standalone application for Windows, Mac, and Linux
+How to use the Rect Tool
 
-How to edit a project’s Quality Settings
+What are anchors and how to use them
 
-How to add an icon to your build
+How to display and update information in the UI
 
-What is the profiler and how to use it to check your project’s performance
+What is a coroutine
 
-What to consider when developing for different platforms.
+How to create a menu
+
+How to use Unity’s UI Interaction Components
+
+What the alpha value of a color is
+
+How to set and change material colors with scripts
+
+What are common accessibility concepts to consider
