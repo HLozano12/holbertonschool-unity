@@ -1,11 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraController
     - MainMenu
+    - PlayerController
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -62,17 +62,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1512}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 2222}
+      Script: {instanceID: 1936}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2226}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2628}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 3216}
+      Script: {instanceID: 2996}
+    - Class: 114
+      Script: {instanceID: 3220}
+    - Class: 114
+      Script: {instanceID: 4002}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -119,23 +123,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1512}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1676}
+      Script: {instanceID: 1680}
     - Class: 114
-      Script: {instanceID: 2222}
+      Script: {instanceID: 2226}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2628}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 3216}
+      Script: {instanceID: 3220}
     - Class: 114
-      Script: {instanceID: 3334}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 4220}
+      Script: {instanceID: 4224}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -239,7 +243,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: c92fe78311df804ff70308a36a86e0c2
+      Hash: 0f8a0c133472b1348784f44d72d7c255
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -581,7 +585,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 41f3b43f9674f7ae25a3859ae83708bb
+      Hash: bee17eee99e28869578f0e645001b86d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -617,7 +621,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: ca0718a0086a90bf565a27bceb03aa1b
+      Hash: a124319de9fe2544126c2ee1f43d18d8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Rotator
@@ -721,4 +725,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/maze.unity
   - Assets/menu.unity
-  playerPath: C:/Users/HLR85/OneDrive/Documents/Holberton/0x03-unity-ui/0x02-unity-scripting.exe
+  playerPath: C:/Users/HLR85/OneDrive/Documents/Holberton/GitHub/holbertonschool-unity/0x04-unity_publishing/Builds/Maze.exe
