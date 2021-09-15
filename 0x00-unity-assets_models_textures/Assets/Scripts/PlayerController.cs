@@ -9,8 +9,8 @@ using UnityEngine.UI;
 		// Controls of player movement
         public GameObject player;
 		private Rigidbody rb;
-		public float speed = 10.0F;
-		public float JumpSpeed = 10.0F;
+		public float speed = 50.0F;
+		public float JumpSpeed = 50.0F;
 		public float JumpHeight = 15.0F;
 		 public float gravity = -10.0f;
 
