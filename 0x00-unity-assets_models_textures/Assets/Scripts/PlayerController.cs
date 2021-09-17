@@ -12,7 +12,7 @@ using UnityEngine.UI;
 		public float speed = 50.0F;
 		public float JumpSpeed = 50.0F;
 		public float JumpHeight = 15.0F;
-		 public float gravity = -10.0f;
+		 public float gravity = -80.0f;
 
 		public Transform Respawn;
 
