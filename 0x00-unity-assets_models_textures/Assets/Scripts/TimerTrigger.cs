@@ -17,7 +17,7 @@ public class TimerTrigger : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         Debug.Log("CLOCK ON");
-        player.GetComponent<Timer>().StopWatch = true;
+        player.GetComponent<Timer>().enabled = true;
     }
   
 }

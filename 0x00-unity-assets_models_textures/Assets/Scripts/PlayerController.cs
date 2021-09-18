@@ -9,10 +9,8 @@ using UnityEngine.UI;
 		// Controls of player movement
         public GameObject player;
 		private Rigidbody rb;
-		public float speed = 50.0F;
-		public float JumpSpeed = 50.0F;
-		public float JumpHeight = 15.0F;
-		 public float gravity = -80.0f;
+		public float speed = 10.0F;
+		public float JumpHeight = 50.0F;
 
 		public Transform Respawn;
 
@@ -34,7 +32,10 @@ using UnityEngine.UI;
 			if (isGround == true)
 			{	
 				rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Jump") * JumpHeight, Input.GetAxis("Vertical") * speed);
+				
 			}
+			
+
 		}
 
 		void Update()
@@ -50,4 +51,20 @@ using UnityEngine.UI;
         	}
     
     	}
+
+		void OnCollisionEnter(Collision Hit)
+		{
+			if (Hit.gameObject.tag == "Floor")
+			{
+				isGround = true;
+			}
+		}
+
+		void OnCollisionExit(Collision Off)
+		{
+			if (Off.gameObject.tag == "Floor")
+			{
+				isGround = false;
+			}
+		}
 	}

@@ -30,7 +30,7 @@ public class WinTrigger : MonoBehaviour
             
 
             // Stop "stop watch".
-            player.GetComponent<Timer>().StopWatch = false;
+            player.GetComponent<Timer>().enabled = false;
 
             TimerText.color = Color.green;
             TimerText.fontStyle = FontStyle.Bold;
