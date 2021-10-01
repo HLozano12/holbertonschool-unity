@@ -21,14 +21,14 @@ public class MainMenu : MonoBehaviour
 
 	public void LevelSelect(int level)
 	{
-		SceneManager.LoadScene(int level);
+		SceneManager.LoadScene(level);
 		PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
 	}
 
 	public void Options()
 	{
 		SceneManager.LoadScene(1);
-		PlayerPrefs.SetInt("Scene", SceneManagement.GetActiveScene().buildIndex);
+		PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
 	}
 
 	

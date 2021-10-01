@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-{
-	 
-}
 
 public class PauseMenu : MonoBehaviour
 {
 
 	public GameObject PauseCanvas;
-	Private bool isPaused;
+	private bool isPaused;
 
     // Start is called before the first frame update
     void Start()
@@ -39,20 +36,20 @@ public class PauseMenu : MonoBehaviour
 	// The Pause menu
 	public void Pause()
 	{
-		Time.TimeScale = 0;
+		Time.timeScale = 0;
 		PauseCanvas.SetActive(true);
 	}
 	// Resume Button
 	public void Resume()
 	{
-		Time.TimeScale = 1;
+		Time.timeScale = 1;
 		PauseCanvas.SetActive(false);
 		isPaused = false;
 	}
 	// Restart Button
 	public void Restart()
 	{
-		SceneManagement.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 	// return Main Menu
 	public void MainMenu()
