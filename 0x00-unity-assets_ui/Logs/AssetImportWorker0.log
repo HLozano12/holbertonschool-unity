@@ -146,3 +146,4 @@ Received Import Request.
 Start importing Assets/Prefabs/FinalTime.prefab using Guid(20510ca6c7e060f439899b5f5f8ab3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cbf1d7e9d4427ba5f0d673497291799') in 0.103375 seconds 
   Import took 0.108173 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
