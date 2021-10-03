@@ -5,22 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class OptionsMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Back()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Apply()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
-
-	// Reverts to previous screen
-	public void Back()
-	{
-		int prev = PlayerPrefs.GetInt("Scene");
-		SceneManager.LoadScene(prev);
-	}
 }

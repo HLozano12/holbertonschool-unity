@@ -6,27 +6,34 @@ public class CameraController : MonoBehaviour
 {
     public GameObject player;
     public Transform target;
-    private Vector3 targetOffset;
+    private Vector3 target_Offset;
 
     public float dragSpeed = 2;
     private Vector3 dragOrigin;
     private float X;
     private float Y;
+    public bool isInverted = false;
 
-    // Called at first frame
+    // Start is called before the first frame update
     void Start()
     {
         target = player.transform;
-        targetOffset = transform.position - target.position;
+        target_Offset = transform.position - target.position;
+		
+		// if invertY activated
+        if (PlayerPrefs.GetInt("isInvertedY") == 1)
+        {
+            isInverted = true;
+        }
     }
 
-    // called once per frame
+    // Update is called once per frame
     void Update()
     {
-        // Linear Interpolation LERP
-        transform.position = Vector3.Lerp(transform.position, target.position+targetOffset, 0.1f);
+        // Steady cam follows player
+        transform.position = Vector3.Lerp(transform.position, target.position+target_Offset, 0.1f);
 
-        // When Mouse is clicked
+        // Rotates when mouse is dragged
         if (Input.GetMouseButtonDown(0))
         {
             transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * dragSpeed, -Input.GetAxis("Mouse X") * dragSpeed, 0));
@@ -41,4 +48,4 @@ public class CameraController : MonoBehaviour
         Vector3 move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
         transform.Rotate(-move, Space.World);
     }
-}	
+}
