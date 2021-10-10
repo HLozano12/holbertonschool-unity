@@ -18,6 +18,11 @@ public class OptionsMenu : MonoBehaviour
         
     }
 
+	public void apply()
+	{
+
+	}
+	
     public void Back()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("Back"));

@@ -11,6 +11,8 @@ public class WinTrigger : MonoBehaviour
     public GameObject flag;
     private Rigidbody fl;
     public Text TimerText;
+	public GameObject TimerCanvas;
+	public GameObject WinCanvas;
 
     void Start()
     {
@@ -27,15 +29,8 @@ public class WinTrigger : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            
-
-            // Stop "stop watch".
-            player.GetComponent<Timer>().enabled = false;
-
-            TimerText.color = Color.green;
-            TimerText.fontStyle = FontStyle.Bold;
-            TimerText.fontSize = 80;
-            
+           TimerCanvas.SetActive(false);
+		   WinCanvas.SetActive(true);        
         }
     }
 }
