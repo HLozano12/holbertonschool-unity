@@ -1,68 +1,87 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseCanvas;
+    public static bool GameIsPaused = false;
+    public GameObject pauseMenuUI;
+
     public Button resumeButton;
     public Button restartButton;
     public Button menuButton;
     public Button optionsButton;
-    public bool isOnPause;
 
-    // Start is called before the first frame update
     void Start()
     {
-        Button ResumeButton = resumeButton.GetComponent<Button>();
-        ResumeButton.onClick.AddListener(Resume);
+        Button resume = resumeButton.GetComponent<Button>();
+        resume.onClick.AddListener(Resume);
 
-        Button RestartButton = restartButton.GetComponent<Button>();
-        RestartButton.onClick.AddListener(Restart);
+        Button restart = restartButton.GetComponent<Button>();
+        restart.onClick.AddListener(Restart);
+
 
         Button MenuButton = menuButton.GetComponent<Button>();
         MenuButton.onClick.AddListener(MainMenu);
 
         Button OptionsButton = optionsButton.GetComponent<Button>();
         OptionsButton.onClick.AddListener(Options);
-
-        isOnPause = false;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Pause();
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
         }
     }
 
-    public void Pause()
+    void Pause()
     {
-        isOnPause = true;
-        pauseCanvas.gameObject.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        pauseMenuUI.SetActive(true);
     }
 
-    public void Resume()
+    void Resume()
     {
-        isOnPause = false;
-        pauseCanvas.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        pauseMenuUI.SetActive(false);
     }
 
-    public void Restart()
+    void Restart()
     {
-        SceneManager.LoadScene(name);
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
     {
+        Time.timeScale = 1f;
+        Debug.Log("timescale");
         SceneManager.LoadScene("MainMenu");
+        Debug.Log("mainmenue");
     }
 
-    public void Options()
+    void Options()
     {
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        PlayerPrefs.SetInt("LastScene", SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("Options");
     }
 }

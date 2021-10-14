@@ -3015,17 +3015,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb7578e92c87d4f42b398215250c82b2, type: 3}
---- !u!114 &1054282437 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5285070175515479731, guid: bb7578e92c87d4f42b398215250c82b2, type: 3}
-  m_PrefabInstance: {fileID: 1054282436}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1154309369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5660,7 +5649,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 32411864}
   resumeButton: {fileID: 32411863}
   restartButton: {fileID: 32411862}
-  menuButton: {fileID: 1054282437}
+  menuButton: {fileID: 1982809871}
   optionsButton: {fileID: 32411861}
 --- !u!114 &1771422929
 MonoBehaviour:
@@ -6011,6 +6000,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1982809871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 619633763941775975, guid: 9e63ea591a105884a8167e4befa58ac2, type: 3}
+  m_PrefabInstance: {fileID: 32411860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2015552896
 PrefabInstance:
   m_ObjectHideFlags: 0
