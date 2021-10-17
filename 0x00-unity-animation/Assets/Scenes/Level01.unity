@@ -3038,8 +3038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b253bcd668335748b14c0cd2975c613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1361003986}
-  target: {fileID: 0}
+  player: {fileID: 1361003998}
+  target: {fileID: 1361003998}
   dragSpeed: 2
   isInverted: 0
 --- !u!1 &971075431 stripped

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject player;
+    public Transform player;
     public Transform target;
     private Vector3 target_Offset;
 
@@ -47,5 +47,8 @@ public class CameraController : MonoBehaviour
         Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
         Vector3 move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
         transform.Rotate(-move, Space.World);
+
+		// follow player without orientation change
+		transform.LookAt(player.position);
     }
 }
