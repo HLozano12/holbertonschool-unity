@@ -32,7 +32,7 @@ using UnityEngine.UI;
 			if (isGround == true)
 			{	
 				rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Jump") * JumpHeight, Input.GetAxis("Vertical") * speed);
-				
+				Debug.Log(Input.GetAxis("Jump"));
 			}
 			
 
@@ -42,7 +42,7 @@ using UnityEngine.UI;
     	{
         // Respwan when fallen < -15 on y axis
         
-        	if (player.transform.position.y < -15)
+        	if (player.transform.position.y < -5)
         	{
             	rb.velocity = new Vector3(0, 0, 0);
             	player.transform.position = Respawn.transform.position;

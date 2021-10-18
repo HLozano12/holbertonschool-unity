@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform player;
+    public Transform tPlayer;
+	public GameObject player;
     public Transform target;
     private Vector3 target_Offset;
 
@@ -17,7 +18,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = player.transform;
+        target = tPlayer.transform;
         target_Offset = transform.position - target.position;
 		
 		// if invertY activated
@@ -49,6 +50,6 @@ public class CameraController : MonoBehaviour
         transform.Rotate(-move, Space.World);
 
 		// follow player without orientation change
-		transform.LookAt(player.position);
+		transform.LookAt(tPlayer.position);
     }
 }

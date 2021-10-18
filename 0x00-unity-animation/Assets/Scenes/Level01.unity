@@ -916,6 +916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ty
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: bbb56aa14875dfa4faf52f8f2883bbe8, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 35c7a5de1b63d3a46a681952ba4bc27f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbb56aa14875dfa4faf52f8f2883bbe8, type: 3}
 --- !u!4 &277256020 stripped
@@ -3038,7 +3042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b253bcd668335748b14c0cd2975c613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1361003998}
+  tPlayer: {fileID: 1361003998}
+  player: {fileID: 1361003986}
   target: {fileID: 1361003998}
   dragSpeed: 2
   isInverted: 0
@@ -4104,7 +4109,7 @@ MonoBehaviour:
   flag: {fileID: 583095753}
   TimerText: {fileID: 1547806614}
   TimerCanvas: {fileID: 720954880}
-  WinCanvas: {fileID: 0}
+  WinCanvas: {fileID: 2100874720}
 --- !u!114 &1361003993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4136,6 +4141,24 @@ MonoBehaviour:
   NextButton: {fileID: 1549664788}
   TimerText: {fileID: 1547806614}
   winText: {fileID: 1534764287}
+--- !u!114 &1361003995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361003986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca13695a88af05d49bd7bf601161872e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1361003986}
+  isRunning: 0
+  isJumping: 0
+  isFalling: 0
+  xAxis: 0
+  yAxis: 0
 --- !u!4 &1361003998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2197559848669875814, guid: efad49b36e4b6c3489d6c0d538c38c5f, type: 3}
@@ -5250,7 +5273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5edeed8e01611684f8a04c84a85ed7ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.78
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5edeed8e01611684f8a04c84a85ed7ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6053,6 +6076,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6578054931051487153, guid: efad49b36e4b6c3489d6c0d538c38c5f, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 35c7a5de1b63d3a46a681952ba4bc27f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efad49b36e4b6c3489d6c0d538c38c5f, type: 3}
 --- !u!1001 &5285070175024228733

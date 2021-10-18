@@ -6,7 +6,7 @@ public class Ty_Controller : MonoBehaviour
 {
 	private Animator Ani;
 	public GameObject player;
-	public float jumping;
+
 	public bool isRunning = false;
 	public bool isJumping = false;
 	public bool isFalling = false;
@@ -30,17 +30,18 @@ public class Ty_Controller : MonoBehaviour
 		xAxis = Input.GetAxis("Horizontal");
 		yAxis = Input.GetAxis("Vertical");
 
-		jumping = Input.GetAxis("jump");
 
 		 // Running
         if (xAxis != 0 || yAxis != 0)
         {
             Ani.SetBool("isRunning", true);
+			Debug.Log("isRunning");
         }
 
         if (xAxis == 0 && yAxis == 0)
         {
             Ani.SetBool("isRunning", false);
+			Debug.Log("isGround");
         }
         
         // Jump
@@ -48,25 +49,28 @@ public class Ty_Controller : MonoBehaviour
         {
             // isJumping = true;
             Ani.SetBool("isJumping", true);
+			Debug.Log("isJumping");
         }
 
         else
         {
             Ani.SetBool("isJumping", false);
+			Debug.Log("isGround");
         }
 
         // Falling
         if (player.transform.position.y < -14)
         {
-            Debug.Log("Player should be falling");
             // isfalling = true;
             Ani.SetBool("isFalling", true);
+			Debug.Log("Player falling");
 
         }
 
         if (TyControl.isGround == true)
         {
             Ani.SetBool("isFalling", false);
+			Debug.Log("isGround");
         }
         
     }
