@@ -31,7 +31,7 @@ public class WinMenu : MonoBehaviour
 		Debug.Log("MainMenu");
     }
 
-    public void Next(int level)
+    public void Next()
     {
         SceneManager.LoadScene(nextScene);
     }
