@@ -10,6 +10,7 @@ public class WinMenu : MonoBehaviour
 	public Button NextButton;
     public Text TimerText;
     public  Text winText;
+	public string nextScene;
 
     int level;
     // Start is called before the first frame update
@@ -27,16 +28,11 @@ public class WinMenu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-		Debug.Log("MainMenue");
+		Debug.Log("MainMenu");
     }
 
     public void Next(int level)
     {
-        if (level == 3)
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
-        else
-            SceneManager.LoadScene(level + 1);
+        SceneManager.LoadScene(nextScene);
     }
 }
