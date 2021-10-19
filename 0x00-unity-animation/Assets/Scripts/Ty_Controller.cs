@@ -59,7 +59,7 @@ public class Ty_Controller : MonoBehaviour
         }
 
         // Falling
-        if (player.transform.position.y < -14)
+        if (player.transform.position.y < -5)
         {
             // isfalling = true;
             Ani.SetBool("isFalling", true);
