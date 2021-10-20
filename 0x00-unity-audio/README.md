@@ -1,6 +1,6 @@
-# Unity - Assets: UI
+# Unity - Audio
 
-Building a simple 3D platformer game with multiple levels
+Building a simple 3D platformer game with multiple levels and Audio
 
 ## Learning Ojectives
 
