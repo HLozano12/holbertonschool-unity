@@ -22,10 +22,17 @@ public class OptionsMenu : MonoBehaviour
     }
 
 	//BGM slider control
-	public void SetBGlevel( float slider_value)
+	
+
+    public void SetBGM(float BGM_Vol)
+    {
+        Mixer.SetFloat("BGM_Vol", Mathf.Log10(BGM_Vol) * 20);
+    }
+
+	public void SetSFX(float SFX_Vol)
 	{
-		Mixer.SetFloat("BGM", Mathf.Log10(slider_value) * 20);
-	} 
+		Mixer.SetFloat("SFX_Vol", Mathf.Log10(SFX_Vol) * 20);
+	}
 	public void apply()
 	{
 
