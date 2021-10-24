@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class WinTrigger : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class WinTrigger : MonoBehaviour
     public Text TimerText;
 	public GameObject TimerCanvas;
 	public GameObject WinCanvas;
+	public AudioSource BGM;
 
     void Start()
     {
@@ -30,7 +32,8 @@ public class WinTrigger : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
            TimerCanvas.SetActive(false);
-		   WinCanvas.SetActive(true);        
+		   WinCanvas.SetActive(true);
+		   BGM.mute = true;       
         }
     }
 }

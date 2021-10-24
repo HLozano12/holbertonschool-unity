@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PauseMenu : MonoBehaviour
     public Button restartButton;
     public Button menuButton;
     public Button optionsButton;
+	public AudioMixerSnapshot AudioPaused;
+	public AudioMixerSnapshot AudioUnpaused;
 
     void Start()
     {
@@ -34,13 +37,16 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+
             if (GameIsPaused)
             {
                 Resume();
+				AudioPaused.TransitionTo(0.01f);
             }
             else
             {
                 Pause();
+				AudioUnpaused.TransitionTo(0.01f);
             }
         }
     }
@@ -59,6 +65,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         pauseMenuUI.SetActive(false);
+		// Audio
+		AudioUnpaused.TransitionTo(0.01f);
     }
 
     void Restart()
@@ -67,6 +75,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		
     }
 
     public void MainMenu()

@@ -12,6 +12,8 @@ public class Ty_Controller : MonoBehaviour
 	public bool isFalling = false;
 	public float xAxis;
 	public float yAxis;
+	public AudioSource run;
+	public AudioSource Land;
 
 
     // Start is called before the first frame update
@@ -19,6 +21,8 @@ public class Ty_Controller : MonoBehaviour
     {
 		// grab animator
         Ani = this.gameObject.GetComponent<Animator>();
+
+		run.mute = true;
     }
 
     // Update is called once per frame
@@ -36,18 +40,24 @@ public class Ty_Controller : MonoBehaviour
         {
             Ani.SetBool("isRunning", true);
 			Debug.Log("isRunning");
+			// isRunning true play footsteps_running audio
+			run.mute = false; 
+
         }
 
         if (xAxis == 0 && yAxis == 0)
         {
             Ani.SetBool("isRunning", false);
 			Debug.Log("isGround");
+			// isRunning false footsetp_running audio will mute
+			run.mute = true;
         }
 
 	   // Falling
         if (player.transform.position.y < -5)
         {
             // isfalling = true;
+			isFalling = true;
             Ani.SetBool("isFalling", true);
 			Debug.Log("Player falling");
 
@@ -55,8 +65,13 @@ public class Ty_Controller : MonoBehaviour
 
         if (TyControl.isGround == true)
         {
-            Ani.SetBool("isFalling", false);
+			if (isFalling == true)
+				Land.Play();
+			
+			isFalling = false;
+		    Ani.SetBool("isFalling", false);
 			Debug.Log("isGround");
+			
         }
 
         // Jump
