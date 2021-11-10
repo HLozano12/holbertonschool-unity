@@ -10,21 +10,6 @@ public class ButtonLinks : MonoBehaviour
 	public string InstagramURL;
 	public string LinkedInURL;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-		GitHub();
-		Twitter();
-		Instagram();
-		LinkedIn();
-    }
-
 	public void GitHub()
 	{
 		if (Input.GetMouseButtonDown(0))
