@@ -12,33 +12,21 @@ public class ButtonLinks : MonoBehaviour
 
 	public void GitHub()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			Application.OpenURL(GitHubURL);
-		}
+		Application.OpenURL(GitHubURL);
 	}
 
 	public void Twitter()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			Application.OpenURL(TwitterURL);
-		}
+		Application.OpenURL(TwitterURL);
 	}
 
 	public void Instagram()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			Application.OpenURL(InstagramURL);
-		}
+		Application.OpenURL(InstagramURL);
 	}
 
 	public void LinkedIn()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			Application.OpenURL(LinkedInURL);
-		}
+		Application.OpenURL(LinkedInURL);
 	}
 }
